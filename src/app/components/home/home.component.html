@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div>
+  <h6>Faz login ai seu puto!</h6>
+  <form action="">
+    <input
+    placeholder="Email"
+    name="email"
+    [(ngModel)]="dadosLogin.email"
+    />
+    <input [(ngModel)]="dadosLogin.senha" name="senha" type="password" placeholder="Senha" />
+    <button type="button" (click)="mostrar()">Exibir</button>
+  </form>
+  <div *ngIf="exibirDados">
+    <p>Email: {{ dadosLogin.email }}</p>
+    <p>Senha: {{ dadosLogin.senha }}</p>
+  </div>
+</div>
